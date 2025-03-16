@@ -1,0 +1,28 @@
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <div class="fadeIn first bg-1">
+      <img src="assets/l1.jpg" id="icon" alt="User Icon" height="260px"/>
+    </div>
+
+
+    <form [formGroup]="loginForm"(ngSubmit)="onLogin(loginForm.value)">
+      <input type="text" id="login" class="fadeIn second" formControlName="usuario" [class.is-invalid]="f.usuario.errors && f.usuario.touched" placeholder="User">
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Por favor, usuario obligatorio.
+      </div>
+      <input type="password" id="password" class="fadeIn third" formControlName="password" [class.is-invalid]="f.password.errors && f.password.touched" placeholder="password">
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Por favor, contraseña obligatoriaa.
+      </div>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+
+    <div class="alert alert-danger" *ngIf="errorsito">
+      <p>{{mensajerror}}</p>
+    </div>
+
+  </div>
+</div>

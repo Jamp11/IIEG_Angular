@@ -1,0 +1,12 @@
+.gradient-custom {
+    background: #a4fc00;
+    
+    background: -webkit-linear-gradient(to right bottom, rgb(66, 90, 226), rgb(113, 140, 199));
+
+    background: linear-gradient(to right bottom, rgb(41, 55, 180), rgb(133, 199, 253))
+    }
+
+    .logout{
+        margin-right: 40px;
+        font-size: 20px;
+    }
